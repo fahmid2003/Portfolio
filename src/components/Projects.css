@@ -1,0 +1,42 @@
+.projects-sec { background: var(--surface); position: relative; overflow: hidden; }
+.proj-blob {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(108,99,255,.15), transparent 70%);
+  top: 10%; left: -100px;
+}
+.proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.proj-card { position: relative; overflow: hidden; border-radius: 24px; display: flex; flex-direction: column; padding-top: .8rem; }
+.proj-top-bar { position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+.proj-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.proj-num { font-family: 'Syne', sans-serif; font-size: 2.5rem; font-weight: 800; color: rgba(255,255,255,.07); line-height: 1; }
+.proj-type-pill { font-size: .68rem; }
+.proj-title { font-size: 1.15rem; font-weight: 800; color: var(--text); margin-bottom: .7rem; line-height: 1.2; }
+.proj-desc { font-size: .86rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 1.1rem; flex: 1; }
+.proj-features { display: flex; flex-direction: column; gap: .35rem; margin-bottom: 1.3rem; }
+.proj-features li {
+  font-size: .81rem; color: var(--text-muted); padding-left: 1.1rem; position: relative;
+  border-bottom: 1px solid var(--border); padding-bottom: .35rem;
+}
+.proj-features li:last-child { border-bottom: none; }
+.proj-features li::before { content: '▸'; position: absolute; left: 0; color: var(--violet); }
+.proj-footer { display: flex; flex-direction: column; gap: .8rem; margin-top: auto; }
+.proj-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+.proj-link {
+  font-size: .78rem; font-weight: 700; letter-spacing: .06em;
+  color: var(--violet); text-decoration: none; transition: opacity .2s;
+  align-self: flex-end;
+}
+.proj-link:hover { opacity: .7; }
+
+@media(max-width: 1000px) { .proj-grid { grid-template-columns: 1fr 1fr; } }
+@media(max-width: 600px) { .proj-grid { grid-template-columns: 1fr; } }
+
+/* Personal project card highlight */
+.proj-card-personal {
+  border-color: rgba(0,245,160,.2);
+  background: linear-gradient(160deg, rgba(0,245,160,.04) 0%, var(--surface) 50%);
+}
+.proj-card-personal:hover {
+  border-color: rgba(0,245,160,.45);
+  box-shadow: 0 20px 60px rgba(0,245,160,.1);
+}

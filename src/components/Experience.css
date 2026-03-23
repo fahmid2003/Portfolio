@@ -1,0 +1,27 @@
+.exp-sec { background: var(--surface); position: relative; overflow: hidden; }
+.exp-blob { width: 450px; height: 450px; background: radial-gradient(circle, rgba(0,229,255,.1), transparent 70%); top: -80px; right: -80px; }
+
+.exp-card { border-radius: 24px; margin-bottom: 1.5rem; }
+.exp-top { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 1.8rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+.exp-logo {
+  width: 54px; height: 54px; border-radius: 14px; flex-shrink: 0;
+  background: var(--grad-4); display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 800; color: var(--bg);
+}
+.exp-title-row { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: .3rem; }
+.exp-role { font-size: 1.4rem; font-weight: 800; color: var(--text); }
+.exp-company { font-size: .88rem; color: var(--text-muted); }
+
+.exp-duties { display: flex; flex-direction: column; gap: .6rem; margin-bottom: 1.5rem; }
+.exp-duty { display: flex; align-items: flex-start; gap: .7rem; font-size: .9rem; color: var(--text-muted); line-height: 1.65; }
+.duty-arrow { color: var(--cyan); font-weight: 700; flex-shrink: 0; margin-top: .05rem; }
+
+.exp-takeaways { display: flex; flex-wrap: wrap; gap: .6rem; padding-top: 1.2rem; border-top: 1px solid var(--border); }
+.takeaway { font-size: .8rem; font-weight: 600; padding: .35rem .9rem; background: rgba(0,229,255,.08); border: 1px solid rgba(0,229,255,.2); color: #80F2FF; border-radius: 99px; }
+
+.vol-card { border-radius: 24px; border-left: 3px solid var(--pink); }
+.vol-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.vol-icon { font-size: 2rem; }
+.vol-title { font-size: 1.15rem; font-weight: 700; color: var(--text); }
+.vol-sub { font-size: .82rem; color: var(--text-muted); }
+.vol-body { font-size: .92rem; color: var(--text-muted); line-height: 1.85; }

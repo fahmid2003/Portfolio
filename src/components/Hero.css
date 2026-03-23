@@ -1,0 +1,106 @@
+.hero {
+  min-height: 100vh; display: flex; align-items: center;
+  padding: 68px 1.5rem 0; position: relative; overflow: hidden;
+}
+.hero-inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; align-items: center; padding-block: 4rem;
+}
+
+/* Blobs */
+.hero-blob-1 {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(108,99,255,.3), transparent 70%);
+  top: -150px; left: -150px;
+}
+.hero-blob-2 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(255,107,157,.2), transparent 70%);
+  bottom: -100px; right: 30%;
+}
+.hero-blob-3 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(0,229,255,.15), transparent 70%);
+  top: 20%; right: -100px;
+}
+
+/* Badge */
+.hero-badge {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .78rem; font-weight: 600; letter-spacing: .08em;
+  background: rgba(0,245,160,.1); border: 1px solid rgba(0,245,160,.3);
+  color: var(--green); padding: .4rem 1rem; border-radius: 99px; margin-bottom: 1.5rem;
+}
+.badge-dot {
+  width: 7px; height: 7px; background: var(--green); border-radius: 50%;
+  animation: blink 1.5s ease-in-out infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+/* Name */
+.hero-name {
+  font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800;
+  line-height: 1.05; margin-bottom: 1.2rem;
+}
+.name-grad {
+  background: var(--grad-1);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.name-last { color: var(--cyan); }
+
+/* Role typewriter */
+.hero-role {
+  font-size: 1.2rem; font-weight: 600; color: var(--text-muted);
+  margin-bottom: 1.5rem; min-height: 2rem;
+}
+.role-text { color: var(--yellow); }
+.cursor-blink { color: var(--violet); animation: blink 1s step-end infinite; }
+
+.hero-desc {
+  font-size: .97rem; color: var(--text-muted); line-height: 1.85;
+  max-width: 480px; margin-bottom: 2rem;
+}
+
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+
+/* Stats */
+.hero-stats {
+  display: flex; gap: 2rem; flex-wrap: wrap;
+  padding-top: 2rem; border-top: 1px solid var(--border);
+}
+.stat { display: flex; flex-direction: column; }
+.stat-n {
+  font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800;
+  background: var(--grad-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.stat-l { font-size: .75rem; color: var(--text-muted); font-weight: 500; }
+
+/* Code card */
+.code-card {
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 16px; overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,.5), 0 0 0 1px rgba(108,99,255,.1);
+  position: relative; z-index: 1;
+}
+.cc-bar {
+  display: flex; align-items: center; gap: .4rem;
+  padding: .8rem 1.2rem; background: rgba(255,255,255,.03);
+  border-bottom: 1px solid var(--border);
+}
+.cc-dot { width: 11px; height: 11px; border-radius: 50%; }
+.cc-dot.red { background: #FF5F57; }
+.cc-dot.yellow { background: #FFBD2E; }
+.cc-dot.green { background: #28CA41; }
+.cc-title { font-size: .78rem; color: var(--text-muted); margin-left: .4rem; font-family: monospace; }
+.cc-code {
+  padding: 1.6rem 1.8rem; font-family: 'Courier New', monospace;
+  font-size: .82rem; line-height: 1.75; color: #CDD6F4; overflow-x: auto;
+  white-space: pre;
+}
+.cc-code code { display: block; }
+
+@media(max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .hero-visual { order: -1; }
+  .hero-name { font-size: 2.8rem; }
+}

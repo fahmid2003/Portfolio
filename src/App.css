@@ -1,0 +1,79 @@
+/* ── SECTION LAYOUT ── */
+.section { padding: 6rem 1.5rem; scroll-margin-top: 70px; }
+.container { max-width: 1100px; margin: 0 auto; }
+
+/* ── SECTION HEADER ── */
+.sec-header { margin-bottom: 3.5rem; }
+.sec-tag {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--violet); background: rgba(108,99,255,.12);
+  border: 1px solid rgba(108,99,255,.3); padding: .35rem 1rem; border-radius: 99px;
+  margin-bottom: 1rem;
+}
+.sec-title {
+  font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: var(--text); line-height: 1.1;
+}
+.sec-title span { background: var(--grad-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+/* ── GRADIENT TEXT UTIL ── */
+.grad-text { background: var(--grad-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.grad-text-2 { background: var(--grad-2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.grad-text-3 { background: var(--grad-3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.grad-text-4 { background: var(--grad-4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+/* ── CARD BASE ── */
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 20px; padding: 2rem;
+  transition: transform .3s, border-color .3s, box-shadow .3s;
+}
+.card:hover { transform: translateY(-4px); border-color: rgba(108,99,255,.4); box-shadow: 0 20px 60px rgba(108,99,255,.12); }
+
+/* ── BUTTONS ── */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: var(--grad-1); color: #fff;
+  padding: .85rem 2rem; border-radius: 99px;
+  font-family: 'Space Grotesk', sans-serif; font-size: .88rem; font-weight: 700;
+  border: none; cursor: pointer; transition: transform .2s, box-shadow .2s;
+  letter-spacing: .03em;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(108,99,255,.4); }
+
+.btn-outline {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: transparent; color: var(--text);
+  padding: .85rem 2rem; border-radius: 99px;
+  font-family: 'Space Grotesk', sans-serif; font-size: .88rem; font-weight: 600;
+  border: 1.5px solid var(--border); cursor: pointer; transition: all .2s;
+}
+.btn-outline:hover { border-color: var(--violet); color: var(--violet); }
+
+/* ── FADE IN ── */
+@keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+.fade-up { animation: fadeUp .7s ease forwards; }
+
+/* ── GLOW BLOB ── */
+.blob {
+  position: absolute; border-radius: 50%; filter: blur(80px);
+  pointer-events: none; z-index: 0;
+}
+
+/* ── PILL TAGS ── */
+.pill {
+  display: inline-block; padding: .3rem .8rem; border-radius: 99px;
+  font-size: .76rem; font-weight: 600; letter-spacing: .04em;
+}
+.pill-v { background: rgba(108,99,255,.2); color: #A89FFF; border: 1px solid rgba(108,99,255,.3); }
+.pill-p { background: rgba(255,107,157,.2); color: #FF9EC0; border: 1px solid rgba(255,107,157,.3); }
+.pill-c { background: rgba(0,229,255,.15); color: #80F2FF; border: 1px solid rgba(0,229,255,.3); }
+.pill-y { background: rgba(255,230,0,.15); color: #FFE966; border: 1px solid rgba(255,230,0,.3); }
+.pill-g { background: rgba(0,245,160,.15); color: #80FAD0; border: 1px solid rgba(0,245,160,.3); }
+.pill-o { background: rgba(255,140,66,.2); color: #FFB480; border: 1px solid rgba(255,140,66,.3); }
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px) {
+  .section { padding: 4rem 1.2rem; }
+  .card { padding: 1.5rem; }
+}

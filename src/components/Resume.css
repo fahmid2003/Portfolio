@@ -1,0 +1,38 @@
+.resume-sec { background: var(--surface); position: relative; overflow: hidden; }
+.resume-blob {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255,107,157,.12), transparent 70%);
+  bottom: -100px; left: -100px;
+}
+.resume-wrap { border-radius: 24px; }
+.resume-top {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;
+}
+.r-name { font-size: 2rem; font-weight: 800; background: var(--grad-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.r-sub { font-size: .88rem; color: var(--text-muted); margin-top: .3rem; }
+.r-contact-chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+.chip {
+  font-size: .75rem; font-weight: 600; padding: .35rem .85rem;
+  background: var(--surface2); border: 1px solid var(--border); border-radius: 99px;
+  color: var(--text-muted);
+}
+.r-divider { height: 1px; background: var(--border); margin: 1.5rem 0; }
+.r-section { margin-bottom: 2rem; }
+.r-sec-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: .7rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--violet); margin-bottom: 1rem;
+  padding-bottom: .5rem; border-bottom: 1px solid rgba(108,99,255,.2);
+}
+.r-entry { margin-bottom: 1.1rem; }
+.r-entry-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: .4rem; }
+.r-entry-title { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: .2rem; }
+.r-entry-org { font-size: .84rem; color: var(--violet); font-weight: 500; }
+.r-text { font-size: .88rem; color: var(--text-muted); line-height: 1.75; margin-top: .3rem; }
+.badge-wrap { display: flex; flex-wrap: wrap; gap: .5rem; }
+.r-list { margin-top: .7rem; display: flex; flex-direction: column; gap: .35rem; }
+.r-list li {
+  font-size: .86rem; color: var(--text-muted); padding-left: 1.2rem; position: relative;
+}
+.r-list li::before { content: '▸'; position: absolute; left: 0; color: var(--violet); }

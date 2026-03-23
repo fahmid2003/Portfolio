@@ -1,0 +1,24 @@
+.about { position: relative; overflow: hidden; background: var(--bg); }
+.about-blob {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(0,229,255,.12), transparent 70%);
+  top: 0; right: -100px;
+}
+.about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 2rem; }
+.about-card { margin-bottom: 1.5rem; font-size: .95rem; color: var(--text-muted); line-height: 1.85; }
+.phil-card { border-left: 3px solid var(--violet); background: rgba(108,99,255,.06); font-size: .92rem; color: var(--text-muted); line-height: 1.85; }
+.phil-label { font-size: .72rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--violet); margin-bottom: .8rem; }
+
+.info-grid { display: flex; flex-direction: column; gap: .75rem; }
+.info-item {
+  display: flex; align-items: center; gap: 1rem;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: .9rem 1.1rem;
+  transition: border-color .2s, transform .2s;
+}
+.info-item:hover { border-color: rgba(108,99,255,.4); transform: translateX(4px); }
+.info-ico { font-size: 1.2rem; width: 28px; text-align: center; flex-shrink: 0; }
+.info-lbl { font-size: .67rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); }
+.info-val { font-size: .88rem; font-weight: 600; color: var(--text); margin-top: .1rem; }
+
+@media(max-width:900px) { .about-grid { grid-template-columns: 1fr; } }
