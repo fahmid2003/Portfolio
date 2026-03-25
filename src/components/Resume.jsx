@@ -55,7 +55,7 @@ export default function Resume() {
               <div className="r-entry-head">
                 <div>
                   <div className="r-entry-title">Higher Secondary Certificate (HSC) – Science</div>
-                  <div className="r-entry-org">Brindabon Government College · GPA: 5.00 / 5.00</div>
+                  <div className="r-entry-org">Saidpur Government Science College · GPA: 5.00 / 5.00</div>
                 </div>
                 <span className="pill pill-p">Completed 2021</span>
               </div>
